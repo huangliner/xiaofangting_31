@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function part(name,age){
+				this.name= name;
+				this.age=age;
+				this.F=function(){
+					console.log('Myname is'+this.name+'Myage is'+this.age);
+				};
+			}
+			var obj=new part('艾米-丽黛儿',18);
+			obj.F();
+		</script>
+	</body>
+</html>
