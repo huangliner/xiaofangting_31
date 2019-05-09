@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var target=new Date(2019,5,9,6,20,0);
+			var target=new Date(2019,5,15,0,0,0);
+			var now = new Date();
+			var remTimes = (new Date(year, month - 1, day, hour, minute, second)) - (new Date()); 
+				var days = parseInt(remTime / 1000 / 60 / 60 / 24, 10);
+				var hours = parseInt(remTime / 1000 / 60 / 60 % 24, 10); 
+				var minutes = parseInt(remTime / 1000 / 60 % 60, 10); 
+				var seconds = parseInt(remTime / 1000 % 60, 10); 
+				days = currTime(days);
+				hours = currTime(hours);
+				minutes = currTime(minutes);
+				seconds = currTime(seconds);
+				setInterval("setTimes(2019,05,15,08,30,00)", 1000);
+                console.log('剩余'+days+'天'+hours+'时'+minutes+'分'+seconds+'秒';)
+                function currTime(a) { 
+				if (a < 10) {
+					a = "0" + i;
+				}
+				return a;
+			}
+			setTimes();
+		</script>
+	</body>
+</html>
