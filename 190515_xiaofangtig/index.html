@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				width: 510px;
+				height: 200px;
+				border: 1px solid grey;
+				float: left;
+			}
+			li{
+				list-style: none;
+	            float: left;
+			}
+			ul.h1{
+				background: grey;
+				border-bottom: 0px solid grey;
+			}
+			ul.h2{
+				background: goldenrod;
+				border-bottom: 1px solid grey;
+			}
+			a{
+				width: 100px;
+	            height: 60px;
+				border: 1px solid grey;
+				display: block;
+				line-height: 60px;
+				font-size: 18px;
+				font-weight: 600;
+				text-decoration: none;
+				color: black;
+				text-align: center;
+			}
+			#box{
+				position: absolute;
+				top: 100px;
+				width: 500px;
+				height: 170px;
+				 border: 0px solid red; 
+				
+			}
+			#box{
+				display: none;
+			}
+			#box1{
+				display: block;
+			}
+		   p{
+				width: 250px;
+				height: 25px;
+				/* border: 1px solid red; */
+				float: left;
+				text-align: center;
+				line-height: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="h1"><a href="#">公告</a></li>
+			<li class="h2"><a href="#">规则</a></li>
+			<li><a href="#">论坛</a></li>
+			<li><a href="#">安全</a></li>
+			<li><a href="#">公益</a></li>
+		
+			<div id="box1">
+				<p>公告七夕：金牛爱送玫瑰</p>
+				<p>10万家店60万新品</p>
+				<p>阿里打造"互联网监管"</p>
+				<p>全球最大网上时装周</p>
+			</div>
+			<div id="box">
+				<p>"全额返现"要管控啦</p>
+				<p>炒信规则调整意见反馈</p>
+				<p>淘宝新规发布汇总</p>
+				<p>质量相关规则近期变更</p>
+			</div>
+			<div id="box">
+				<p>接次文件，毁了一家店</p>
+				<p>新版阿里110上线了</p>
+				<p>账号安全神器阿里线盾</p>
+				<p>卖家学违禁避免被处罚</p>
+			</div>
+		</ul>
+		
+		<script>
+		window.onload=function(){
+			    
+				var olis=document.getElementsByTagName('li');
+				var odivs=document.getElementsByTagName('div');
+				for (var i = 0; i < olis.length; i++) {
+				    olis[i].index=i;
+					olis[i].onclick=function() {
+					for (var i=0;i<olis.length;i++){
+							olis[i].className="h2";
+						}
+						olis[this.index].className="h1";
+						for (var j=0;j<odivs.length;j++) {
+							odivs[j].className="box";
+						}
+						odivs[this.index].className="box1";
+
+					};
+
+				};
+
+			};
+			getTad();
+		</script>
+	</body>
+</html>
